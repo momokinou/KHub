@@ -14,7 +14,8 @@
 **[Module Lecture](#module-lecture)**<br>
 **[Module Edition](#module-edition)**<br>
 **[Module Torrent](#module-torrent)**<br>
-**[Module Librairie](#module-librairie)**<br>
+**[Module Librairie](#module-librairie)**<br><br>
+**[Authors](#Authors)**<br>
 
 ## Besoins non fonctionnelles
 
