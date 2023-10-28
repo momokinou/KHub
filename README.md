@@ -42,6 +42,68 @@
     - Séparation Back/Front? Je ne vois pas de possibilité.
     - Découpage du back en modules avec leur source propre.
 
+___
+
+## Architecture
+
+### Module Core
+
+    - Définition des modèles/types des données.
+    - Base de données interne pour facilité la récupération des informations liées à une oeuvre?
+        - Dépendant des autres modules.
+
+### Module Extraction
+
+    - Extraction des pistes de sous-titres et des pistes audios.
+    - Extraction de toutes les données.
+    - Ajouter l'option de le faire automatiquement lors d'un téléchargement d'un torrent?
+
+### Module Insertion
+
+    - Insertion de pistes de sous-titres et des pistes audios à un fichier .mkv.
+    - Mettre des erreurs/alertes si la durée de la piste importée est plus longue/courte que la vidéo.
+
+### Module Lecteur vidéo
+
+    - Lecteur de fichiers .mkv.
+        - Pouvoir choisir sa piste de sous-titres / En importer une.
+        - Pouvoir choisir sa piste audio / En importer une.
+    - Lecteur de fichier .mp4.
+    - Pouvoir changer la vitesse de lecture.
+    - Pouvoir changer la résolution.
+    - Pouvoir changer le volume.
+    - Play/Pause
+    - Se souvenir où est-ce qu'un épisode a été arrêté.
+
+### Module Lecture
+
+    - Chercher la liste des extensions de fichier les plus utilisées pour les mangas/webtoons, etc...
+    - Lecteur de ces dits fichiers.
+    - Se souvenir de l'endroit où c'est arrêté le lecteur.
+    - Lecture automatique.
+        - Vitesse de défilement réglable.
+        - Vitesse de défilement intelligente suivant le nombre de mots dans la page.
+    - Pouvoir choisir sa langue de lecture.
+    - Pouvoir choisir une langue que l'on souhaite travailler/apprendre.
+
+### Module Edition
+
+    - Module dépendant des modules d'extraction et d'insertion.
+    - Edition des fichiers de sous-titres.
+    - Vise à automatiser la récupération des textes sur les webtoons et à la remplacer par du blanc/couleur du fond plus facilement.
+
+### Module Torrent
+
+    - Téléchargement de torrents.
+    - Seed de torrents.
+
+### Module Librairie // A réfléchir
+
+    - Consulter/Afficher toutes les oeuvres présentes sur le PC/les dossiers sélectionnés.
+    - Récupérer automatiquement des informations sur les oeuvres.
+    - Classer automatiquement les oeuvres en fonction du type de fichiers dans les dossiers.
+        - Possibilité d'avoir mangas/webtoons/etc... et animés sous la même oeuvre.
+
 ## Authors
 
 - [momokinou](https://github.com/momokinou)
