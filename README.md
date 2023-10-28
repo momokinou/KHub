@@ -1,5 +1,21 @@
 # KHub
 
+## Table of Contents
+
+**[Besoins non fonctionnelles](#Besoins-non-fonctionnelles)**<br>
+**[Contexte](#contexte)**<br>
+**[Use cases](#Use-cases)**<br>
+**[Contraintes/Sujets à réflexion](#Contraintes-Sujets-à-réflexion)**<br><br>
+**[Architecture](#architecture)**<br>
+**[Module Core](#Module-Core)**<br>
+**[Module Extraction](#module-extraction)**<br>
+**[Module Insertion](#module-insertion)**<br>
+**[Module Lecteur vidéo](#module-Lecteur-vidéo)**<br>
+**[Module Lecture](#module-lecture)**<br>
+**[Module Edition](#module-edition)**<br>
+**[Module Torrent](#module-torrent)**<br>
+**[Module Librairie](#module-librairie)**<br>
+
 ## Besoins non fonctionnelles
 
     - Performance:
@@ -36,7 +52,7 @@
         - Multiple langues
         - Edition pour faciliter les traductions/fantrad
 
-## Contraintes/Sujets à réflexion
+## Contraintes Sujets à réflexion
 
     - Dépendance forte à FFMPEG au moment de l'extraction des sous-titres et pistes audios.
     - Séparation Back/Front? Je ne vois pas de possibilité.
@@ -97,12 +113,14 @@ ___
     - Téléchargement de torrents.
     - Seed de torrents.
 
-### Module Librairie // A réfléchir
+### Module Librairie
 
+    - BESOIN DE REFLEXION
     - Consulter/Afficher toutes les oeuvres présentes sur le PC/les dossiers sélectionnés.
     - Récupérer automatiquement des informations sur les oeuvres.
     - Classer automatiquement les oeuvres en fonction du type de fichiers dans les dossiers.
         - Possibilité d'avoir mangas/webtoons/etc... et animés sous la même oeuvre.
+
 
 ## Authors
 
