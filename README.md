@@ -23,7 +23,7 @@
     - Sécurité:
     - Plateformes visées: PC, mobiles si possible.
     - Hébergement: côté client/torrents.
-    - Technologies: Tauri. Rust/Framework JS à définir.
+    - Technologies: Tauri. Rust/Svelte.
     - IHM: Prévoir 16/9 au début puis adapter. 1080p.
     - Tests: Tests automatique de chaque fonction.
     - Code:
@@ -33,7 +33,7 @@
 ## Contexte
 
     - Rapidité: Le plus rapide possible. Eviter les MAJ inutiles car volume de données très important.
-    - Volume de données: 100Mo => Plusieurs To.
+    - Volume de données: quelques Ko => Plusieurs To.
     - Dépendance réseau: Dépend de la localisation des données. Dépendance forte si utilisation de torrents.
     - Quelle langue: Initiale français (vive la France) puis langue disposant de traductions pour les vidéos/livres.
     - Public: Grand public => Application légèrement customisable mais fermée pour faciliter son utilisation/prise en main.
