@@ -43,7 +43,7 @@ Retourne le path actuellement définit.
 Utilisée pour sauvegarder le path d'enregistrement des fichiers.
 Utilisée à chaque démarrage de l'applciation.
 
-### get_subtitle_path (): Path
+### get_audio_path (): Path
 
 Retourne le path actuellement définit.
 
