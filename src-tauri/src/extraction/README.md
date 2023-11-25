@@ -19,31 +19,31 @@ unsafe {
 }
 ```
 
-### subtitle_path: Path
+### subtitle_path: String
 
 Variable stockant le path vers où sont enregistrés les fichiers de sous-titres.
 
-### audio_path: Path
+### audio_path: String
 
 Variable stockant le path vers où sont enregistrés les fichiers audio.
 
 ## Fonctions
 
-### set_subtitle_path (path: Path)
+### set_subtitle_path (tauri::AppHandle, String): String
 
 Utilisée pour sauvegarder le path d'enregistrement des fichiers.
 Utilisée à chaque démarrage de l'applciation.
 
-### get_subtitle_path (): Path
+### get_subtitle_path (tauri::AppHandle): String
 
 Retourne le path actuellement définit.
 
-### set_audio_path (path: Path)
+### set_audio_path (tauri::AppHandle, String): String
 
 Utilisée pour sauvegarder le path d'enregistrement des fichiers.
 Utilisée à chaque démarrage de l'applciation.
 
-### get_audio_path (): Path
+### get_audio_path (tauri::AppHandle): Path
 
 Retourne le path actuellement définit.
 

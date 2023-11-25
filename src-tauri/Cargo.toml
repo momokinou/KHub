@@ -1,5 +1,5 @@
 [package]
-name = "KHub"
+name = "khub"
 version = "0.0.1"
 description = "A Tauri App for mkv editing"
 authors = ["momokinou"]
