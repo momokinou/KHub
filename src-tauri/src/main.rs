@@ -16,6 +16,7 @@ fn main() {
         .invoke_handler(tauri::generate_handler![
             extraction::subtitles::get_subtitle_path,
             extraction::subtitles::set_subtitle_path,
+            extraction::subtitles::get_all_subtitle,
             extraction::audio::get_audio_path,
             extraction::audio::set_audio_path,
         ])

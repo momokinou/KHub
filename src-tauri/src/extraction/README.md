@@ -32,7 +32,6 @@ Variable stockant le path vers où sont enregistrés les fichiers audio.
 ### set_subtitle_path (tauri::AppHandle, String): String
 
 Utilisée pour sauvegarder le path d'enregistrement des fichiers.
-Utilisée à chaque démarrage de l'applciation.
 
 ### get_subtitle_path (tauri::AppHandle): String
 
@@ -41,27 +40,24 @@ Retourne le path actuellement définit.
 ### set_audio_path (tauri::AppHandle, String): String
 
 Utilisée pour sauvegarder le path d'enregistrement des fichiers.
-Utilisée à chaque démarrage de l'applciation.
 
-### get_audio_path (tauri::AppHandle): Path
+### get_audio_path (tauri::AppHandle): String
 
 Retourne le path actuellement définit.
 
-### get_all_subtitles (file_path: Vec<Path>, lang: Vec<String>)
+### get_all_subtitles (file_path: Vec<String>)
 
 Créé les fichiers de sous-titres dans un path prédéfinis via les paramètres globaux du module.
 
 Récupère, en paramètre, une liste de fichiers Matroska (.mkv) ainsi qu'une liste de langages respectant la notation ISO.
-Ne retourne rien.
 
-### get_all_audios (file_path: Vec<Path>)
+### get_all_audios (file_path: Vec<String>)
 
 Créé les fichiers audios dans un path prédéfinis via les paramètres globaux du module.
 
 Récupère, en paramètre, une liste de fichiers Matroska (.mkv) ainsi qu'une liste de langages respectant la notation ISO.
-Ne retourne rien.
 
-### is_mkv (file_path: Path)
+### is_mkv (file_path: String)
 
 Check si le fichier est bien un mkv.
 Est effectué au début de chaque fonction impliquant un mkv.
