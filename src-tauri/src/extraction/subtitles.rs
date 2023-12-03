@@ -1,13 +1,6 @@
-use crate::kore;
+use crate::{extraction::types::MediaContent, kore};
 
 use std::{path::Path, process::Command};
-
-#[derive(Debug)]
-struct MediaContent {
-    index: String,
-    codec: String,
-    lang: String,
-}
 
 #[tauri::command]
 pub fn get_subtitle_path(app_handle: tauri::AppHandle) -> String {

@@ -19,6 +19,7 @@ fn main() {
             extraction::subtitles::get_all_subtitle,
             extraction::audio::get_audio_path,
             extraction::audio::set_audio_path,
+            extraction::audio::get_all_audio,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
