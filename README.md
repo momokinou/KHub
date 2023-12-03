@@ -1,5 +1,7 @@
 # KHub
 
+Desktop (for now) application aiming to help works on video (mkv for now) and manga/webtoons.
+
 ## Table of Contents
 
 **[Besoins non fonctionnelles](#Besoins-non-fonctionnelles)**<br>
