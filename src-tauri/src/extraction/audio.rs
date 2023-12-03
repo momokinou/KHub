@@ -29,8 +29,8 @@ pub fn set_audio_path(app_handle: tauri::AppHandle, new_path: String) -> String 
 
 #[tauri::command]
 pub fn get_all_audio(app_handle: tauri::AppHandle, path: String) {
-    let subtitles_path = get_audio_path(app_handle);
-    let mut subtitles: Vec<MediaContent> = vec![];
+    let audio_path = get_audio_path(app_handle);
+    let mut audios: Vec<MediaContent> = vec![];
 
     let cmd = Command::new("ffprobe")
         .args([
@@ -63,7 +63,7 @@ pub fn get_all_audio(app_handle: tauri::AppHandle, path: String) {
             // Convert to i8 and String
             if let (Ok(index), codec) = (index_str.parse::<String>(), codec_str.join("")) {
                 let lang = lang_str.join("");
-                subtitles.push(MediaContent { index, codec, lang });
+                audios.push(MediaContent { index, codec, lang });
             } else {
                 eprintln!("Error while trying to convert to i8");
             }
@@ -71,31 +71,35 @@ pub fn get_all_audio(app_handle: tauri::AppHandle, path: String) {
             eprintln!("Can't split on two parts");
         }
     }
-    println!("{:?}", subtitles);
+    println!("{:?}", audios);
 
     let file_name: String = Path::new(&path)
         .file_stem()
         .unwrap()
         .to_string_lossy()
         .to_string();
-    for subtitle in subtitles {
-        let index: String = "0:".to_owned() + &subtitle.index;
+    for audio in audios {
+        let index: String = "0:".to_owned() + &audio.index;
+        println!("index: {:?}", index);
+        println!("path: {:?}", audio_path);
+        println!("file_name: {:?}", file_name);
+        println!("lang: {:?}", audio.lang);
         let extract_path: String =
-            subtitles_path.clone() + "\\" + &file_name + "_" + &subtitle.lang + ".aac";
-        println!("{:?}", extract_path);
-        Command::new("ffmpeg")
+            audio_path.clone() + "\\" + &file_name + "_" + &audio.lang + ".aac";
+        println!("Extract path: {:?}", extract_path);
+        let cmd = Command::new("ffmpeg")
             .args([
                 "-i",
                 &path,
+                "-vn",
                 "-map",
                 &index,
-                "-f",
-                "aac",
-                "-c:s",
+                "-c",
                 "copy",
                 &extract_path,
             ])
             .output()
             .expect("failed to execute process");
+        println!("{:?}", cmd);
     }
 }
