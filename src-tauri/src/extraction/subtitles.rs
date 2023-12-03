@@ -119,10 +119,10 @@ fn remove_netflix_forced_narrative(lang: String) -> String {
 fn get_extension_by_codec(codec: &str) -> &'static str {
     match codec.to_lowercase().as_str() {
         "ass" => "ass",
-        "dvb_subtitle" => "",
-        "dvd_subtitle" => "",
+        "dvb_subtitle" => "", // Les fichiers de sous-titres "image-based" ne sont pas supportés.
+        "dvd_subtitle" => "", // Les fichiers de sous-titres "image-based" ne sont pas supportés.
         "eia_608" => "", // Les closed captions ne sont généralement pas stockées dans des fichiers séparés
-        "hdmv_pgs_subtitle" => "",
+        "hdmv_pgs_subtitle" => "", // Les fichiers de sous-titres "image-based" ne sont pas supportés.
         "jacosub" => "jss",
         "microdvd" => "sub",
         "mov_text" => "mov",
