@@ -54,7 +54,7 @@ pub fn get_config_file_path(app_handle: tauri::AppHandle) -> String {
         + "\\config.json"
 }
 
-fn is_valid_path(path_str: &str) -> bool {
+pub fn is_valid_path(path_str: &str) -> bool {
     let path = Path::new(path_str);
 
     path.exists() && (path.is_absolute() || path.is_relative())

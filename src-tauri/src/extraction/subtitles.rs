@@ -1,4 +1,7 @@
-use crate::{extraction::types::MediaContent, kore};
+use crate::{
+    extraction::{common::is_mkv_file, types::MediaContent},
+    kore,
+};
 
 use std::{path::Path, process::Command};
 
@@ -29,6 +32,9 @@ pub fn set_subtitle_path(app_handle: tauri::AppHandle, new_path: String) -> Stri
 
 #[tauri::command]
 pub fn get_all_subtitle(app_handle: tauri::AppHandle, path: String) {
+    if !is_mkv_file(&path) || kore::config::is_valid_path(&path) {
+        panic!("The file is not a MKV");
+    }
     let subtitles_path = get_subtitle_path(app_handle);
     let mut subtitles: Vec<MediaContent> = vec![];
 
